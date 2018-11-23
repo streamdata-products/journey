@@ -1,0 +1,321 @@
+---
+layout: default
+title: Streamdata.io API Journey -
+---
+
+<section class="masthead">
+
+	<div style="text-align:left;">
+
+		<h1>Journey - Development</h1>
+		<p>AN API development journey.</p>
+					<hr />
+			<h2>API Development</h2>
+			<p></p>
+							<h3>Definitions</h3>
+				<p>This is the current outline for the portion of our general API Journey workshops focused on the development process, making sure the API contract is used to drive th development of code, and moving it from development to QA, and into production.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Organization</strong> - Defining which organization each API belongs to while it is being designed, understanding which organization is responsible for it throughout this phase.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Domain</strong> - Defining which domain an API is being designed in, connecting the dots with domain experts, resources, and other relevant context that should be considered as an API is being iterated upon.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Repository</strong> - Use repository to version, build, and deploy each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Team</strong> - Extend the team list for a service to include the development, QA, and other stakeholders involved in this area of the lifecycle.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) README</strong> - Update the README for the repository to reflect what is happening as part of development.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Schema</strong> - JSON schema for the data behind service, providing a standalone JSON schema for use in other systems, applications, and services. Doing the heavy lifting of describing the objects, fields, types, and other technical details of the data behind each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) OpenAPI</strong> - An OpenAPI definition for the surface area of the API, providing a machine readable contract for what each service delivers, that can be used across the API lifecycle, guiding every aspect of delivering each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>8) AsyncAPI</strong> - Defining how AsyncAPIs are used as part of the design process to document the event-driven characteristics of the platform.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>9) Postman Collections</strong> - Defining how Postman Collections are used as part of the API design process, to help make APIs more executable, mockable, and usable during the design phase.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>10) Tags</strong> - What tags are associated with an API, making it more discoverable and organizable as part of the larger API catalog.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Discovery</h3>
+				<p>Making sure there are machine readable definitions available at development time, providing an OpenAPI as a contract for what each service should do.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Catalog</strong> - Ensuring that the central API catalog is leverage as part of the API design workflow. Pulling API definitions out and moving them forward, while always leaning on the catalog as the central truth.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Filter</strong> - Being able to filter APIs in the catalog by the phase they are in, understanding if they are currently being developed.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Search</strong> - Being able to search across APIs that are being developed by specific characteristics of the collections they are in, the OpenAPI contract, or other granular details.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Virtualization</h3>
+				<p>Continuing to maintain virtualized instances of APIs as part of the API development process.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Paths</strong> - Offering mock API paths for use by developers to understand what an API does / should do.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Data</strong> - Considering offering synthetic data for use by integrators, helping ensure virtualized APIs provide as production like experience in a virtualized way.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Dedicated Sandbox</strong> - Adding an API to a dedicated sandbox ensuring that a virtualized instance is always available for consumers to play with and understand what is possible.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Personalized Sandbox</strong> - Providing Docker images, machine images, and other virtualized instances of an API, allowing consumers to deploy their own personal virtualization of an API.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Database</h3>
+				<p>The database behind each service, acting as the data source for these resources.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Platform</strong> - The database platform used to drive each service, providing a dedicated database to just drive each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Schema</strong> - Making sure there is a database version of the schema, providing a raw dump and backup of the database behind each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Region</strong> - Where the database for each service is located, helping articulate if there is replication, or regional specific implementations or considerations for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Access</strong> - How the database is connected with by the service, defining what connectivity is required, and what dependencies are involved with access.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Logs</strong> - Understanding how logging occurs for the database, what is turned on, and where logs are stored, and or shipped to as part of regular operations.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Backup</strong> - Ensuring that the database has a backup strategy, and the details of what is backed up and how long it is being backed up.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Encryption</strong> - Ensuring the encryption is part of the database operations, making sure data is being stored as part of the database behind each service.
+					</li>
+
+				</ol>
+				<p>Providing a dedicated database resource for just this single service to use.</p>
+								<h3>Storage</h3>
+				<p>The storage used for each service, where all objects are stored.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Platform</strong> - The platform that is used for storage behind each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Region</strong> - Where the storage is located that is used for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Access</strong> - Details on how storage is accessed as part of each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Logs</strong> - Information about the logging for storage behind service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Backup</strong> - Ensuring there is a backup strategy for storage behind service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Encryption</strong> - Ensuring encryption is considered for storage.
+					</li>
+
+				</ol>
+				<p>Providing a single location each service to manage it's storage.</p>
+								<h3>DNS</h3>
+				<p>The DNS addressing used to route all traffic to each service.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Platform</strong> - Which platform is used to provide DNS for service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Mock</strong> - The host used for the mock API.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Development</strong> - The host used for the development API, providing access to the version of API currently being developed.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Production</strong> - The host used for the production API, which is the address that should actually be used in applications.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Portal</strong> - The host used for the developer portal, providing a single location that everyone can find what is happening around a service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Encryption</strong> - Ensuring encryption is used as part of API transport, and SSL is default for all services.
+					</li>
+
+				</ol>
+				<p>Using a single subdomain that can be used to access this resource.</p>
+								<h3>Deployment</h3>
+				<p>The deployment of any service, and defining how it can be delivered into a production environment.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Compute</strong> - The compute that is delivering each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Framework</strong> - Which programming framework is used to deploy each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Function</strong> - Which function is used to deploy each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Containers</strong> - Which container is used to deploy each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Gateway</strong> - Which gateway is used to deploy each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Pipeline</strong> - Information regarding the pipeline in use for service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Region</strong> - Information regarding which region each service is deployed.
+					</li>
+
+				</ol>
+				<p>Providing a strong framework for consistently delivering services across an organization.</p>
+								<h3>Orchestration</h3>
+				<p>The orchestration of the build and deliver of a service, defining how the technical building blocks are orchestrated to deliver the resulting service.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Containers</strong> - The orchestration and management of containers, allowing APIs to be evolved, scaled, and managed in an automated way.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Build</strong> - Information regarding the build of each service and how it is deployed.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Hooks</strong> - Information regarding pre or post commit hooks for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Jobs</strong> - Information regarding the jobs used as part of each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Events</strong> - Information about events used for managing jobs for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Schedule</strong> - Information about the schedule sin use to manage each service.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Dependencies</h3>
+				<p>Defining the dependencies associated with each service, helping quantifying what each service needs to do what it does successfully.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Service</strong> - Information about services each service depends on.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Software</strong> - Information about software each service depends on.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Data</strong> - Information about data each service depends on.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) People</strong> - Information about people each service depends on.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Organization</strong> - Information about organization each service depends on.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Applications</strong> - Information about applications that depend on services.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Testing</h3>
+				<p>The definitions for each service.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Scenarios</strong> - The scenarios for testing each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Saved Requests</strong> - Save specific requests from a service to be used in testing.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Results</strong> - The results of assertions tested against each service.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Performance</h3>
+				<p>Establishing what the benchmarks are for a service, and what can be expected when it comes to performance.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Tests</strong> - The performance tests for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Results</strong> - The results of performance test for each service.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Security</h3>
+				<p>The definitions for each service.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Overview</strong> - The overview of security practices for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Policies</strong> - The policies in use for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Tests</strong> - The security tests in use for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Results</strong> - The results of security for each service.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Staying In Tune</h3>
+				<p>Here are the communication channels provided to you, helping you stay in tune with what is changing with each service, and the overall platform behind it.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Blog</strong> - The blog for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Twitter</strong> - The Twitter account for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Github</strong> - The Github account for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Internal</strong> - Internal communication channel for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) External</strong> - External communication channels for each service.
+					</li>
+
+				</ol>
+				<p>These channels should provide you with a regular heartbeat of the changes being made, and what is being planned as part of this platform's operations.</p>
+								<h3>Support</h3>
+				<p>We provide three ways in which you can receive support for this API, and have your questions answered as you are working to integrate it into your web or mobile application.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Email</strong> - The email account for supporting each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) GitHub Issues</strong> - Where to submit an issue to get support for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Twitter</strong> - Where to get support publicly using a supported Twitter account
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Ticket</strong> - Where to submit a ticket to get support for each service.
+					</li>
+
+				</ol>
+			<p></p>
+
+	</div>
+
+</section>

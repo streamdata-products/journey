@@ -1,0 +1,281 @@
+---
+layout: default
+title: Streamdata.io API Journey -
+---
+
+<section class="masthead">
+
+	<div style="text-align:left;">
+
+			<h2>API Discovery</h2>
+			<p>Understanding where your digital resources are is critical to maturing and evolving in how you do APIs. API discovery means many different things to different groups, but in the context of this journey, it is about knowing where your APIs are, and understanding what your organization is capable of doing. Having a coherent catalog of API definitions for ALL of your organizational services, as well as the technical, and business details behind them.</p>
+							<h3>Goals</h3>
+				<p>Defining what the meaning and goals for API discovery are, acknowledging there are many different perspectives on what is API discovery, and what it involves to move the conversation around it forward.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) New APIs</strong> - Being able to find new APIs when needed.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Application Development</strong> - Being able to discover and identify the right APIs to be using when building a specific application.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Team Planning</strong> - For use as part of wider team planning, and being able to articulate what is in production, what is being developed, and what is currently being defined and designed as part of a single group.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) External</strong> - Being able to find APIs quickly, as well as provide self-service discovery of services by clients, partners, and other external actors.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Developing An API</strong> - A team is looking to develop an API and they want to understand if one already exists, or maybe better understand existing patterns in use by production applications.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Execution</strong> - Being able to find an API so that you can make a call to it in some code, or through a client application like Postman.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Governance</strong> - Being able to quantify what APIs exist across any group, organization, domain, and the enterprise enterprise at any moment.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Definitions</h3>
+				<p>Work to ensure that all definitions are being aggregated as part of the process so that they can be evolved and moved forward into design, development and production--investing in all of the artifacts that will be needed down the road.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Teams</strong> - Map out all of the individuals being engaged as part of the service and API discovery process, grouping them by team, group, or other organizational structure.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Organizations</strong> - Defining the organizational structure, group, or other bounded context for organizing definitions into.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Domains</strong> - Considering the domain that services fits into and exploring the sphere of knowledge and activity around the domain each service is delivering value within. Quantifying the service domain, helping decompose from a larger domain, and helping focus what each service does.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Vocabularies</strong> - Organizing the common vocabulary in use across services, and APIs, establishing a single place to find the language used across domains.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Tags</strong> - Defining what tagging taxonomy will be applied across resources, for use in tagging across definitions, documentation, and infrastructure operations.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Event Storming</strong> - Event storming is a rapid, lightweight, and underappreciated group modeling technique that is intense, fun, and useful for accelerating development teams.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Schema</strong> - Organizing individual schema associated with a service, while also including it as part of the OpenAPI. Providing SQL dumps, JSON Schema, and other artifacts that help define the schema that are in use across the enterprise.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>8) Contracts</strong> - Having a formal definition of each API that is depended on as part of operations. If it is driving business it should have a robust OpenAPI contract behind it, defining every aspect of the service it provides.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>9) Headers</strong> - Establishing a master catalog of all HTTP headers, and identifying the ones that are in use. Understanding the overall header landscape across services, and how they are leverage by other stops along the API lifecycle like authentication, security, tracing, etc.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>10) Parameters</strong> - Possessing a birds eye view of parameters used across all APIs, and having a commonly defined set of parameters that can be used and reused across APIs during their design, development, and ultimately production phases.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>11) Servers</strong> - Documenting all of the servers in use across API infrastructure, and using their existing outputs to understand what APIs operate or are consumed there. Providing a central set of definitions regarding all server infrastructure which can be reused across API operations, and as part of the design, development, and production phases.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>12) Environments</strong> - Having a common way to define, organize, share, and audit API environments that can be used as part of the development and operation of API infrastructure, as well as by consumer facing elements of operations. Using common formats like Postman Environments to define, and organize common environments that will exist across the enterprise.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Data Sources</h3>
+				<p>Understanding what resources are already on the public websites, and applications, by spidering existing domains looking for data assets that should be delivered as API resources. Looking for the low hanging fruit of digital resources that already exists across an organization, which has already been published for a reason, and should most likely also be available as a machine readable API.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Spreadsheets</strong> - adfIdentifying all of the spreadsheet files that are regularly published and shared across internal groups, with partners and the public, ensuring that all spreadsheets are available as machine readable, as well as human readable sources of information.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Comma Separate Values (CSV)</strong> - Identify all of the CSV files that have been published within any domains.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Extensible Markup Language (XML)</strong> - Identify all of the XML files that have been published within any domains.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) JavaScript Object Notation (JSON)</strong> - Identify all of the JSON files that have been published within any domains.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Tables</strong> - Identify all of the HTML tables that have been published within any domains.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) HTML Forms</strong> - Looking at the usage of forms across websites, and other applications, to identify what the data source behind them are, and how they can be tapped as a potential API source, eventually replacing forms with better organized embeddable API tooling.
+					</li>
+
+				</ol>
+				<p>Low hanging fruit is about identifying the resources that already exist, are already being shared with internal groups, partners, and with the public via highly trafficked areas of the web. Actively understanding what is being published by groups across the enterprise, and helping incentivize all teams to publish all digital resources as API-first.</p>
+								<h3>Discovery Sources</h3>
+				<p>Looking for many of the common sources where signals of APIs can be found as part of the ongoing API discovery process. Helping automate and add to the API catalog beyond just the manual, self-declared processes that may occur.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Log Files</strong> - Looking at existing sources of log files, and to where log files are shipped to, examining them for API signals that can be harvested and used to build the API discovery catalogs.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) AWS Cloudfront</strong> - Leveraging AWS Cloudfront to find existing signs of APIs in use.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Google Stackdriver</strong> - Leveraging Google Stackdriver to find existing signs of APIs in use.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Aure Logging</strong> - Leveraging Azure logging to find existing signs of APIs in use.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Email</strong> - Looking at email when it comes to discovery, allowing for easy sharing via common used messaging format, but also the ability to scan and forward emails for common API file formats.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) GitHub</strong> - Looking for API signals that exist across GitHub repositories, user accounts, and organizations.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Discovery Formats</h3>
+				<p>Defining the potential sources of web service and API signals that can be tapped from around the enterprise. Tuning into existing workspaces, content and data sources, looking for API signals that can be harvested. Helping map out the API landscape that already exists, using the outputs of existing systems that already operate as part of the API supply chain within the enterprise.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) WSDL</strong> - Looking for WSDL documents across an organization.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) API.json</strong> - Looking for APIs.json files across an organization.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) OpenAPI</strong> - Looking for OpenAPI files across an organization.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Postman Collection</strong> - Looking for Postman Collections across an organization.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) .HAR</strong> - Looking for evidence of APIs from .HAR files that are gathered from proxies, browsers, and other tooling, aggregating the signals gathered and using to map out the API landscape across an organization in real time.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) JSON Schema</strong> - Looking for JSON schema files that can be used to help build out OpenAPI definitions, and provide the seeds for API contracts that may already be in use for applications, or as part of existing infrastructure and operations.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) RAML</strong> - Looking for RAML files that already exist, or can be generated from out of existing systems.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>8) API Blueprint</strong> - Looking for API Blueprint files that already exist, or can be generated from out of existing systems.
+					</li>
+
+				</ol>
+				<p>There are signals of API usage all over the enterprise. While it is ideal for API development teams to be able to submit the definitions of their APIs to a central catalog, it is something that should always be augmented with more automated approaches to identifying potential data sources, and scanning common locations to discover existing API usage in real time.</p>
+								<h3>Dependencies</h3>
+				<p>Working to define any dependencies that are in play, and will play a role in operations by auditing the stack behind any service as it is being discovered and documented as part of the overall API discovery effort.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Services</strong> - What existing services does a service depend on to do what it does, and would be impacted if something changes.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Software</strong> - What are the software libraries a service depends on for its operations, covering the code layer dependencies.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Data</strong> - What is the provenance of data being used as part of the service, and where are their continued dependencies.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) People</strong> - What people is a service dependent on, requiring coordination, communication, and effort from individuals to move forward, and ensuring the right stakeholders are involved.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Organizations</strong> - What other organizations, internally or externally are required to move a service forward, making sure all stakeholders are considered.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Applications</strong> - Documenting the client applications dependencies for a service, outlining who depends on the service based upon the applications they are using.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Connections</strong> - Making sure to connect all the dots when it comes to mapping out dependencies, showing the relationships between services, software, data, people, organizations, and applications.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Catalog</h3>
+				<p>Actively maintaining a catalog of all APIs in use, working to automatically identify new APIs in use, as well as actively profiling, and increasing access and usage of more refined, better known APIs across the enterprise.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Overview</strong> - Providing an overview of what the API catalog, and helping explain what the catalog is for, and how to use it properly.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Collections</strong> - Allow the organization of APIs into different types of collections, allowing individual, or groups of APIs and services to be organized into precise collections for use across the enterprise.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Definitions</strong> - Allow for the cataloging of multiple types of API definitions for any particular API, documenting OpenAPI, API Blueprint, RAML, WSDL, Postman Collections, and any other artifact that supports API discovery.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Data</strong> - Allowing for datasets to be registered with the catalog, adding regular datasets to the discovery effort, and make available alongside APIs, and the applications that depend on them.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Applications</strong> - Allowing applications to be registered in the catalog alongside datasets, and APIs, completing the loop when it comes to discovery across a platform.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Servers</strong> - Provide a central catalog of all servers that are used across API infrastructure, tapping all the definitions present for any domain, subdomain, and IP address in usage across the enterprise.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Search</strong> - Provide basic, as well as more advanced search allowing all APIs, artifacts, and other meta data to b searched, filtered, and sorted.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>8) Self-Service</strong> - Ensuring that the API catalog is self-service, allowing all targeted providers, consumers, and other stakeholders to actively browse, search, and manage the API catalog in a self-service way.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>9) Personalizaton</strong> - Allow for users of the catalog to personalize and customize their catalog experience by favoriting, labeling, and providing other ways to make it more useful for each individual using it.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Communication</h3>
+				<p>Having a strategy for reaching out to teams and engaging with them around API discovery, helping them remember to register and define their APIs as part of wider strategy.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Email</strong> - Use email to coordinate with other groups regarding the APIs they are supporting, working on, and planning on designing in the near future.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Meetings</strong> - Provide a recurring set of meetings focused on discussing what APIs exist, and are being developed, ensuring that teams come together regularly to discuss where the APIs and services are.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Workshops</strong> - Conducting workshops to actively develop wider discovery practices, helping teams make their API catalogs more discoverable, and in alignment with other teams.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Strategy</strong> - Having a strategy for how APIs and other services are identified, aggregated, cataloged, and made available across the enterprise for everyone to put to work in an efficient way.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Support</h3>
+				<p>Ensure that all teams have support when it comes to questions about web service and API discovery, helping them initially, as well as along the way, making sure all their APIs are accounted for, and indexed as part of discovery efforts.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Email</strong> - Having a dedicated email account for supporting each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) GitHub Issues</strong> - Where to submit an issue to get support for each service.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Evangelism</h3>
+				<p>Considering the evangelism around just API discovery, and helping amplify its effect. Actively telling stories around the platform, and keeping groups informed around what APIs are available, and the best practices around making them more discoverable and consumable.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) New APIs</strong> - Have a new API widget that can live on the catalog home page, across other API portals, or any other web property helping surface any APIs that were just added to the catalog.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Active APIs</strong> - Have an active API widget that can live on the catalog home page, across other API portals, or any other web property helping surface any APIs that have been recently change, updated, or move into new phase.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Newsletter</strong> - Providing an email newsletter that regularly highlights new, active, and other APIs in the catalog. Also bringing attention to best practices, and other building blocks of API discovery across the enterprise.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Talks</strong> - Giving talks with other internal, partner, or public groups regarding the availability of APIs, and what discovery looks like across the enterprise, helping spread the word about what is happening.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Reporting</strong> - Providing a regular set of reports to stakeholders regarding the number of APIs, the type of APIs, by team, organization, and other metric. Delivering a regular set of reports that stakeholders can tune into to understand what is happening with API discovery, and the importance of it moving forward and evolving.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Conclusion</h3>
+				<p>In the end you can't secure what you don't know about, and you can't confidently articulate the capabilities of the enterprise if you do not have visibility into the APIs that exist, and the resources they are providing access to. API discovery will be essential to every other area, and stop along the lifecycle, making the enterprise more efficient, agile, and evolvable in what it does.</p>
+				<ol>
+
+				</ol>
+				<p></p>
+
+			<p></p>
+
+	</div>
+
+</section>

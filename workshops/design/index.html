@@ -1,0 +1,355 @@
+---
+layout: default
+title: Streamdata.io API Journey - Design
+---
+
+<section class="masthead">
+
+	<div style="text-align:left;">
+
+			<h2>Journey - Design</h2>
+			<p>This is the current outline for the portion of our general API Journey workshops focused on designing an API, providing a common framework for thinking bout how APIs are designed, and providing guidance across enterprise teams.</p>
+							<h3>Definitions</h3>
+				<p>Using definitions as the center of the API design process, developing an OpenAPI contract for moving things through the design phase, iterating, evolving, and making sure the definitions drive the business goals behind each service.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Organization</strong> - The over-arching source control organization for each service, providing an umbrella for different development groups and projects, and governing who has access to each design.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Domain</strong> - Considering the domain that each service fits into and exploring the sphere of knowledge and activity around the domain each service is delivering value within, ensuring the the right definitions, vocabulary, and other elements are present at design time.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Repository</strong> - Leveraging source control repository for each service, providing a self-contained, shareable, forkable way to engage with a service. Allowing for EVERYTHING involved with a service to be accessed in a single location.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) README</strong> - The README for each services repository, providing an overview of the service, complete with all the relevant links to all the moving parts. Any user should be able to land on the README, and easily get up to speed on what a service delivers.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Service Name</strong> - A simple title for each service, describing what it does in concise terms, providing a simple way for any internal or external part to learn about the value it offers.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Service Description</strong> - A simple, descriptive paragraph for each service. Providing less that 250 words about what value each service delivers. Avoid just writing the obvious, and describing what an API is, and focusing in on describing the value being delivered by each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Schema</strong> - JSON schema for the data behind service, providing a standalone JSON schema for use in other systems, applications, and services. Doing the heavy lifting of describing the objects, fields, types, and other technical details of the data behind each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>8) OpenAPI</strong> - An OpenAPI definition for the surface area of the API, providing a machine readable contract for what each service delivers, that can be used across the API lifecycle, guiding every aspect of delivering each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>9) AsyncAPI</strong> - Using AsyncAPI definitions as part of the API design process to help articulate and share a machine readable definition of message, streaming, and other types of API formats.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>10) Postman Collections</strong> - Providing a Postman Collection for any API being developed, ensuring there is an machine readable, executable definition that can be used in common client tooling.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>11) Tags</strong> - Defining what tagging taxonomy will be applied across resources, for use in tagging across definitions, documentation, and infrastructure operations. Ensuring that APIs leave this stage of the lifecycle properly tagged for organization, indexing and discovery.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>12) Assertions</strong> - Human and machine readable assertions of what service does, leveraging the existing JSON schema, and translating that into business objectives, asserting that a service does what it is supposed to--providing a simple bulleted list explaining what is expected of a service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>13) Scenarios</strong> - Providing machine readable definitions that provide the mappings and business rules for orchestrations, scenarios, and other automated processes associated with a service, for use as part of testing, monitoring, security, and other automated functionality.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>14) Team</strong> - A list of team members for the service, providing a nice list of who is responsible for designing the relevant business contract that will be needed to move a service from design to production.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>15) Export Contract</strong> - Ensuring that all contracts and artifacts are exported as part of the design area of the lifecycle, making it available for use across development and production stages.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>16) Import Contract</strong> - Enable the importing of OpenAPI contracts, and other artifacts, enabling API definitions to be portable and usable across the API design process, as well as other stops along the API lifecycle.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Design</h3>
+				<p>The API design strategy for use as part of each service.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Base Path</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Path(s)</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Verb(s)</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Parameters</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Enumerators</strong> - Consider the role enumerators play in onboarding developers and helping define the overall API contract.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Headers</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Request Body</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>8) Actions</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>9) Media Types</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>10) Hypermedia</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>11) HTTP Status Codes</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>12) Filtering</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>13) Query Languages</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>14) Pagination</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>15) Sorting</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>16) Response(s)</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>17) Errors</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>18) Scope</strong> - Considering the overall approach to design for all APIs, executing upon design patterns that are in use to consistently deliver services across teams. Leveraging a common set of patterns that can be used across services, beginning with REST, but also eventually allowing the leveraging of hypermedia, GraphQL, and other patterns when it comes to the deliver of services.
+					</li>
+
+				</ol>
+				<p>Setting a consistent design strategy for all services.</p>
+								<h3>Versioning</h3>
+				<p>Managing the definition of each API contract being defined as part of the API design stop for this area of the lifecycle, and having a coherent approach to laying out next steps.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Scope</strong> - Defining what the scope of versioning will be, and where it is applied across the API stack, including the data, back-end code, API design, and front-end code.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Formats</strong> - Define the major release for each service.Under this scheme, version numbers and the way they change convey meaning about the underlying code and what has been modified from one version to the next.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Road Map</strong> - Making sure there is a road map definition for each version of a service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Communication</strong> - Ensuring there is a strategy for communicating with all stakeholders around the release.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Webhooks</h3>
+				<p>Adding webhooks.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Outbound</strong> - Allowing for outbound webhooks, that make calls to external URLS based upon some event that occurs within the platform.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Inbound</strong> - Considering how APIs are designed to allow for the receipt of webhooks from other system, working with external schemas, and further integrating with other popular 3rd party platforms.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Fat Webhooks</strong> - Adding webhooks.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Skinny Webhooks</strong> - Allowing for webhooks just to be notifying of event, and a resulting API call will be needed to retrieve the data.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Event Types</strong> - Providing a comprehensive list of events that can be subscribed to as part of webhooks.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Event-Driven</h3>
+				<p>Going outside the request and response reality of APIs, and the basics of webhooks, and looking at how event-driven infrastructure can be used to augment existing API and microservice solutions.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Server-Sent Events (SSE)</strong> - Leverage SSE to provide real time sustained HTTP connections for API consumers, allowing them to receive data as it is added or updated.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Websockets</strong> - Using TCP to provide two-way websocket connections for consumers to be able to get real time data, as well as submit data back to the API.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Kafka</strong> - Using Kafka to move large volumes of data around, creating topical queues for consumers to tap into and publish resources to as part of internal and partner operations.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Topics</strong> - Defining what topics are available as real time, or even webhook resources, allowing users to subscribe to only what they are looking for.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Event Types</strong> - Document what types of events occur across request and response infrastructure, and defining webhook and other event-driven infrastructure subscriptions, channels, and other ways of organizing infromation.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Protocols</h3>
+				<p>Thinking critically about how and why we use protocols during the API design process. Why are we using HTTP 1.1, and should we be using HTTP/2, or considering TCP and UDP?</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) HTTP 1.1</strong> - Ensuring that HTTP 1.1 is leveraged and put to work as core protocol during the API design process.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) HTTP/2</strong> - Understanding if and how HTTP/2 is being leveraged and put to work as core protocol during the API design process.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) TCP</strong> - Understanding when and if TCP is present as part of the API design process, leveraged for Websockets, Kafka, or other implementation.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Virtualization</h3>
+				<p>Mocked, sandbox, and virtualized instances of APIs and other data for understanding what an API does.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Paths</strong> - Considering offering mock API paths for use by integrators, providing production-like instances of the API to use, and play with to provide feedback on API services.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Data</strong> - Considering offering synthetic data for use by integrators, helping ensure virtualized APIs provide as production like experience in a virtualized way.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Dedicated Sandbox</strong> - Adding an API to a dedicated sandbox ensuring that a virtualized instance is always available for consumers to play with and understand what is possible.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Personal Sandbox</strong> - Providing Docker images, machine images, and other virtualized instances of an API, allowing consumers to deploy their own personal virtualization of an API.
+					</li>
+
+				</ol>
+				<p>Helping consumers understand what is possible when it comes to integrating and learning about an API.</p>
+								<h3>Testing</h3>
+				<p>Going beyond just testing, and making sure that a service is being tested at a granular level, using schema for validation, and making sure each service is doing exactly what it should, and nothing more.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Scenarios</strong> - The scenarios for testing each service, providing a machine readable format for wrapping a series of API calls into a specific scenario.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Saved Requests</strong> - Save specific requests from a service to be used in testing.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Responses</strong> - Save specific responses from a service to be used in testing.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Playback</strong> - Allowing requests to be played back, based upon history.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Results Archive</strong> - The results of assertions tested against each service, providing a history of all tests.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Reporting</strong> - Having a strategy for reporting from testing that is occurring.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>7) Assertions</strong> - Using assertion definitions to standardized and definition driven helping formalize and make testing consistent across services.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Landing Page</h3>
+				<p>Making sure that each individual service being designed has a landing page for accessing it\'s documentation, and other elements during the design phase.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Hosting</strong> - Information about the hosting service used for this portal.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Template</strong> - Information regarding the UI template used for this portal.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Discovery</strong> - Ensure that each services landing page is discoverable through the design phase.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Documentation</h3>
+				<p>Ensuring that there is always comprehensive, up to date, and if possible interactive API documentation available for all APIs being designed, allowing all stakeholders to easily understand what an API is going to accomplish.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Definitions</strong> - Links to the machine readable API definitions for use as part of each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Interactive</strong> - Providing interactive documentation using one of the open source, or documentation as a service companies available today.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Paths</strong> - Documenting the API paths that are available for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) Schema</strong> - The descriptive header and footer paragraphs for the documentation schema.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Examples</strong> - Examples of using the API path for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>6) Errors</strong> - Details about the errors encountered using each service, including status codes, and messages.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Support</h3>
+				<p>Ensuring there are support channels available for an API, and stakeholders know who to contact when providing feedback and answering questions in real, or near real time, pushing forward the design process.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Email</strong> - The email account(s) for supporting each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) GitHub Issues</strong> - Where to submit an issue to get support for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Tickets</strong> - Providing a ticketing system for submitting formal support requests as part of the design process.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Communication</h3>
+				<p>Making sure there is a communication strategy for moving an API through the design phase, and making sure stakeholders are engaged as part of the process, with regular updates about what is happening.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Blog</strong> - The blog for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Github</strong> - The Github account for each service.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Internal</strong> - Internal communication channel for each service, like Slack or other channel.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>4) External</strong> - External communication channels for each service, like Slack or other channel.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>5) Workshops</strong> - Conducting workshops to actively develop wider design practices.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Road Map</h3>
+				<p>Providing a list of what is being worked on with each service being designed, and pushed forward, providing a common list for everyone involved to work from.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Private Road Map</strong> - Providing an internal, private road map that design stakeholders can use to understand what is being designed.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Road Map</strong> - Providing and publishing a road map (when applicable) that design stakeholders can use to understand what is being designed.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Suggestions For The Road Map</strong> - Provide a mechanism for users to make suggestions for the road map.
+					</li>
+
+				</ol>
+				<p></p>
+								<h3>Discovery</h3>
+				<p>Make sure all APIs are discoverable after they go through the design phase, ensuring each type of API definition is up to date, and catalogs are updated as part of the process.</p>
+				<ol>
+									<li style="padding: 2px 0px 2px 15px;">
+						<strong>1) Catalog</strong> - Keeping all definitions available in a central catalog after design time.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>2) Filter</strong> - Being able to filter APIs in the catalog by the phase they are in, understanding if they are currently being designed an iterated upon.
+					</li>
+										<li style="padding: 2px 0px 2px 15px;">
+						<strong>3) Search</strong> - Being able to search across APIs that are being designed by specific characteristics of the collections they are in, the OpenAPI contract, or other granular details.
+					</li>
+
+				</ol>
+
+			<p></p>
+
+	</div>
+
+</section>
