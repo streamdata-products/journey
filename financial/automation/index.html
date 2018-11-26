@@ -1,0 +1,610 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Presentation</title>
+      <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='/assets/reveal-main.css' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+			.gist {width:100% !important;}
+    		.gist-file
+    		.gist-data {max-height: 500px;}
+
+			.blinking{
+			    animation:blinkingText 0.8s infinite;
+			}
+			@keyframes blinkingText{
+			    0%{     color: #000;    }
+			    25%{    color: transparent; }
+			    35%{    color: #000; }
+			    50%{    color: #000; }
+			    75%{    color: #000; }
+			    85%{    color: transparent;  }
+			    100%{   color: #000;    }
+			}
+
+    	</style>
+   </head>
+   <body>
+
+      <div class="reveal">
+
+         <!-- Used to fade in a background when a specific slide state is reached -->
+         <div class="state-background"></div>
+         <!-- Any section element inside of this container is displayed as a slide -->
+         <div class="slides">
+
+
+
+<style>
+
+div.polaroid
+	{
+	width: 90%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+
+div.container {
+  text-align: center;  padding: 10px 20px; width: 100%;
+}
+
+slidewrap {
+	padding: 25px; margin: 50px; border: 1px solid #000;
+}
+
+.slideleft {
+	padding: 25px; border: 1px solid #000; width:45%; display: block;  float: left;
+}
+.slideright {
+	border: 1px solid #000;  width:50%; display: block; float: right; padding: 100px; text-align:left;
+}
+</style>
+	<section style="padding: 25px;">
+
+		<div style="padding: 25px; border: 0px solid #FFF; width:45%; display: block;  float: left;">
+			<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/bank-or-robo-advisor-800-768x432.jpg" alt="Some Title">
+			  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+			</div>
+		</div>
+		<div style="border: 0px solid #FFF; width:5%; display: block; float: right; text-align:left;"><br /></div>
+		<div style="border: 0px solid #FFF; width:40%; display: block; float: right; padding: 15px; text-align:left;">
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Banking Roboadvisor Aggregator</p>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; ">To help illustrate the importance of hybrid API technology, we wanted to highlight the potential for enabling next generation applications that support retail banking customers. Demonstrating the importance of common banking APIs, but also the ability to stream, orchestrate, and respond to real time events that occur each day across the financial sector. Showing how APIs, and event-driven infrastructure investments can help power the next generation of financial applications, products, and services.<br><br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-streamdata.png" align="center" width="350"></p></p>
+		</div>
+
+			</section>
+				<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/financial-management.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Tom Has Three Separate Banks Account With Three Different Banks</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">In our financial RoboAdvisor narrative, our primary character Tom has three separate bank accounts with three different banks, helping him manage different aspects of his personal financial world, and investments. He has found himself using three separate banks and accounts out of necessity over time, and doesn't have much interest in changing.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="130"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/mortgage-tag-cloud.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Tom Pays And Manages His Mortgage Using The First Bank</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Tom setup a bank account with a bank when he purchased his home 10 years ago, now he owns four rental properties, and uses this account to manage his investments, as well as personal mortgage for his home.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="130"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/bank-payroll.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Tom Receives His Salary Using The Second Bank</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">When Tom started a new job a few years back, he was encouraged to setup a bank account with the local credit union that his employer has a relationship with. He uses this account to manage income from his job, and much of his personal finances.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="130"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/investment-banking.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Tom Manages All His Investments Using The Third Bank</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Toms third bank account is where he manages all of his financial investments, keeping them all organized in one bank that helps him easily keep an eye on what his investments are up to, and make changes as needed.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="130"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/banking-dashboard.png" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Tom Wants Visibility Across All Three Of His Banks</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Tom is tired of having to log in to each of his banks to see what he needs. He wants a single place where he can see what is happening across all three banks, and make decisions in real time regarding his personal, and investment financial worlds.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="130"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/robo-advisor.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Tom Wants RoboAdvisor To Manage His Financial World</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">In addition to having visibility across all three banks, Tom wants to use a RoboAdvisor service to help him automate and manage his financial world. Helping him respond to events, make decisions, and take actions across all of his investments, and finances.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="130"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/banka.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">If Toms First Bank Has APIs And Event-Driven Infrastructure</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">If Toms first bank where he manages his mortgage has APIs, and have made an investment in streaming, choreography, and other event-driven infrastructure, he has no problem authorizing RoboAdvisor to access everything about his real estate investments.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Amplify</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Axway Amplify is used to help banks, and other financial institutions deploy and manage their API infrastructure, helping develop their catalog of digital capabilities that can be applied internally, externally with partners, as well as public stakeholders when it makes sense.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">If Toms First Bank Has APIs And Event-Driven Infrastructure</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">POST https://payments.bankb.openbanking.com/v1 >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">{
+	"id": "3843847384388438hfh383847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A"
+}</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Request</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;"><span class="blinking">{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Response</p>
+						  </div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/bankb.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">If Toms Second Bank Has APIs And Event-Driven Infrastructure</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">If Toms second bank where he manages his salary has APIs, and have made an investment in streaming, choreography, and other event-driven infrastructure, he has no problem authorizing RoboAdvisor to access everything about his personal income.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Amplify</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Axway Amplify is used to help banks, and other financial institutions deploy and manage their API infrastructure, helping develop their catalog of digital capabilities that can be applied internally, externally with partners, as well as public stakeholders when it makes sense.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">If Toms Second Bank Has APIs And Event-Driven Infrastructure</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">POST https://payments.bankb.openbanking.com/v1 >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">{
+	"id": "3843847384388438hfh383847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A"
+}</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Request</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;"><span class="blinking">{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Response</p>
+						  </div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/louis-vuitton-bank.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">If Toms Third Bank Has APIs And Event-Driven Infrastructure</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">If Toms third bank where he manages his financial investments has APIs, and have made an investment in streaming, and other event-driven infrastructure, he has no problem authorizing RoboAdvisor to access everything regarding his investment portfolio.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Amplify</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Axway Amplify is used to help banks, and other financial institutions deploy and manage their API infrastructure, helping develop their catalog of digital capabilities that can be applied internally, externally with partners, as well as public stakeholders when it makes sense.https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">If Toms Third Bank Has APIs And Event-Driven Infrastructure</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">POST https://payments.bankb.openbanking.com/v1 >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">{
+	"id": "3843847384388438hfh383847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A"
+}</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Request</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;"><span class="blinking">{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Response</p>
+						  </div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-3.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RoboAdvisor Can Choreograph Streams Across Three Banks</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Because all three of Toms banks have APIs, and have invested in web hooks, streaming, and other event-driven infrastructure, it means that 3rdd party aggregators like RoboAdvisor can choreograph any activity that is available across all three banks, helping Tom respond to whats matter, and automate more of his work.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribed to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/aggregate-streams.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RoboAdviser Can Aggregate Streams Across Three Banks For Tom</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Since all three of Toms banks have APIs, and have invested in web hooks, streaming, and other event-driven infrastructure, it means that 3rdd party aggregators like RoboAdvisor can provide dashboards, mobile, and other applications that give them visibility across all of their bank accounts in a seamless way.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Event Delivered In Real time By Streamdata.io</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - The bank can augment its existing API infrastructure deployed and managed by Axway with Streamdata.io event-driven infrastructure, allowing banks and other approved 3rd party providers to create specific topical channels that anyone can subscribe to and receive as real time streams.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/bank-security.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RoboAdvisor Has Secure Access To All Three Of Toms Bank Accounts</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Since all three of Toms banks have APIs it means that he can authorize 3rd party aggregators to access his account information on his behalf, and securely put his information to work for him, allowing him to access data across all three banks via a single platform.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/robo-advisor.jpg" align="center" width="250"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/bank-aggregation.jpeg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RoboAdvisor Can Safely And Efficiently Aggregating Across Three Banks</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Because all three of Toms banks have APIs, and have invested in web hooks, streaming, and other event-driven infrastructure, it mens that 3rd party aggregators like RoboAdvisor can efficiently access Toms bank information, without putting a strain on the banks, or scraping their websites.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/robo-advisor.jpg" align="center" width="250"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/banking-real-time-events.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RoboAdvsor Can Response To Real Time Events Across Three Banks</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Because all three of Toms banks have APIs, and have invested in web hooks, streaming, and other event-driven infrastructure, it means that 3rdd party aggregators like RoboAdvisor can respond to real time events, and allow Tom to choreograph his financial presence across three banks.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/robo-advisor.jpg" align="center" width="250"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/financial-management.png" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Helping Tom Better Manage His Financial Portfolio</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">All of the access, aggregation, and automation banking APIs introduce into Toms world help him more easily see what is happening, make more informed decisions in real time, and streamline the execution of what matters to him most. Helping him better manage is financial portfolio and achieve his personal financial goals.In our financial RoboAdvisor demonstration, our primary character Tom has three separate bank accounts with three different banks, helping him manage different aspects of his personal financial world, and investments.<br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/tom-banking-financial.jpg" align="center" width="150"></p></p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Hybrid API Infrastructure Paying Off</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">This demonstration is designed to amplify the benefits of banks having simple web APIs for the resources they depend on to do business. It is also designed to show the importance of real time, streaming, and event-driven orchestration across these valuable API resources, allowing for the pushing and pulling of critical data around the web, between 3rd party service providers, with the ability to choreograph exactly the types of experience consumers expect when it comes to doing business each day, and live their lives as they desire.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;"></p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">For more information you can visit axway.com or streamdata.io to learn more about enabling the real time payments as outlined in this demonstration.</p>
+				</div>
+
+
+			</section>
+
+         </div>
+         <!-- The navigational controls UI -->
+         <aside class="controls">
+            <a class="left" href="#"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/left-arrow.png" width="50"></a><a class="right" href="#"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/right-arrow.png" width="50"></a>            <a class="up" href="#" style="display: none;">&#x25B2;</a>
+            <a class="down" href="#" style="display: none;">&#x25BC;</a>
+         </aside>
+         <!-- Presentation progress bar -->
+         <div class="progress"><span></span></div>
+      </div>
+      <script src="/assets/head.min.js"></script>
+      <script src="/assets/reveal.min.js"></script>
+      <script>
+         // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+         Reveal.initialize({
+             controls: true,
+             progress: true,
+             history: true,
+
+             theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+             transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+             // Optional libraries used to extend on reveal.js
+             dependencies: []
+         });
+
+      </script>
+   </body>
+</html>

@@ -1,0 +1,2404 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Presentation</title>
+      <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+      <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='/assets/reveal-main.css' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+			.gist {width:100% !important;}
+    		.gist-file
+    		.gist-data {max-height: 500px;}
+
+			.blinking{
+			    animation:blinkingText 0.8s infinite;
+			}
+			@keyframes blinkingText{
+			    0%{     color: #000;    }
+			    25%{    color: transparent; }
+			    35%{    color: #000; }
+			    50%{    color: #000; }
+			    75%{    color: #000; }
+			    85%{    color: transparent;  }
+			    100%{   color: #000;    }
+			}
+
+    	</style>
+   </head>
+   <body>
+
+      <div class="reveal">
+
+         <!-- Used to fade in a background when a specific slide state is reached -->
+         <div class="state-background"></div>
+         <!-- Any section element inside of this container is displayed as a slide -->
+         <div class="slides">
+
+
+
+<style>
+
+div.polaroid
+	{
+	width: 90%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+
+div.container {
+  text-align: center;  padding: 10px 20px; width: 100%;
+}
+
+slidewrap {
+	padding: 25px; margin: 50px; border: 1px solid #000;
+}
+
+.slideleft {
+	padding: 25px; border: 1px solid #000; width:45%; display: block;  float: left;
+}
+.slideright {
+	border: 1px solid #000;  width:50%; display: block; float: right; padding: 100px; text-align:left;
+}
+</style>
+	<section style="padding: 25px;">
+
+		<div style="padding: 25px; border: 0px solid #FFF; width:45%; display: block;  float: left;">
+			<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-pos-payments.jpg" alt="Some Title">
+			  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+			</div>
+		</div>
+		<div style="border: 0px solid #FFF; width:5%; display: block; float: right; text-align:left;"><br /></div>
+		<div style="border: 0px solid #FFF; width:40%; display: block; float: right; padding: 15px; text-align:left;">
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Real Time Payments (RTP) Demo</p>
+			<p style="font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; ">This is a brief API journey, where a restaurant owner is needing to make an order for goods from one of their regular suppliers. Replenishing their inventory so that they can continue serving dinner for the rest of the week. Providing our catalyst for an everyday business tractions that occurs millions of times around the world on any given day, while thoroughly demonstrating the importance of API infrastructure. This is intended to be a brief demonstration of what is possible when Axway API management and choreography solutions, along with Streamdata.io event-driven infrastructure is employed within the banking industry, to meet the needs of everyday business owners.<br><br><br><p align="center"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-streamdata.png" align="center" width="350"></p></p>
+		</div>
+
+			</section>
+				<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-owner.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">A Restaurant Owner Needs To Place An Order With A Supplier</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;"><p>A restaurant owner is need of some supplies to keep his business running through the week, choosing to use of his existing providers who he knows has the items he is looking for.</p><br><p>Knowing that he will be able to make an real time payment through his bank, which will expedite the delivery coming from his supplier, and bringing what he needs to stay in business.</p>	</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-supply.png" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">The Restaurant Owner Visits Their Supplier Website</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;"><p>A restaurant owner is need of some supplies to keep his business running through the week, choosing to use of his existing providers who he knows has the items he is looking for.</p><br><p>Knowing that he will be able to make an real time payment through his bank, which will expedite the delivery coming from his supplier, and bringing what he needs to stay in business.</p>	</p>
+
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Restaurant Supply Store
+host: orders.restaurantsupply.com
+basePath: /v1
+schemes:
+  - https
+paths:
+  /orders:
+    post:
+      summary: Place Order
+      operationId: placeOrder
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/order'
+      responses:
+        '200':
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/order_response'
+definitions:
+  order:
+    type: object
+    properties:
+      order_id:
+        type: string
+        default: B33473847
+      items:
+        type: array
+        items:
+          $ref: "#/definitions/item"
+      address:
+        type: array
+        items:
+          $ref: "#/definitions/address"
+      notes:
+        type: string
+        default: Deliver out back in the alley.
+  address:
+    type: object
+    properties:
+      address:
+        type: string
+        default: 1574 Broadway Street.
+      city:
+        type: string
+        default: Chicago
+      state:
+        type: string
+        default: Illinois
+      zip:
+        type: string
+        default: 33445
+  item:
+    type: object
+    properties:
+      product_id:
+        type: string
+        default: P3939434
+      product_name:
+        type: string
+        default: Bag of Onions
+      quantity:
+        type: integer
+        default: '1'
+      notes:
+        type: string
+        default: Please double bag.
+  order_response:
+    type: object
+    properties:
+      order_id:
+        type: string
+        default: B33473847
+      items:
+        type: array
+        items:
+          $ref: "#/definitions/item"
+      order_status:
+        type: string
+        default: Processed
+      delivery_details:
+        type: string
+        default: Will be delivered by noon tomorrow
+      payment_type:
+        type: string
+        default: Real Time Payment (RTP)
+      notes:
+        type: string
+        default: You will get 5% off next order!</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">OpenAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">The Restaurant Supplier Order Is Submitted Using API</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;"><p>A restaurant owner is need of some supplies to keep his business running through the week, choosing to use of his existing providers who he knows has the items he is looking for.</p><br><p>Knowing that he will be able to make an real time payment through his bank, which will expedite the delivery coming from his supplier, and bringing what he needs to stay in business.</p>	</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Amplify</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Axway has the services to help deploy and manage the API for any commerce solutions, such as one used by the restaurant supplier in this narrative.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">The Restaurant Supplier Order Is Submitted Using API</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">POST https://orders.restaurantsupply.com/v1 >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">{
+	"order_id": "B33473847",
+	"items": {
+		"product_id": "P3939434",
+		"product_name": "Bag of Onions",
+		"quantity": "1",
+		"notes": "Please double bag."
+	},
+	"address": {
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"notes": "Deliver out back in the alley."
+}</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Request</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;"><span class="blinking">{
+	"order_id": "B33473847",
+	"items": {
+		"product_id": "P3939434",
+		"product_name": "Bag of Onions",
+		"quantity": "1",
+		"notes": "Please double bag."
+	},
+	"order_status": "Processed",
+	"delivery_details": "Will be delivered by noon tomorrow",
+	"payment_type": "Real Time Payment (RTP)",
+	"notes": "You will get 5% off next order!"
+}</span></code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Response</p>
+						  </div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/mobile-app-2.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">The Restaurant Supplier Receives Order</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Bank B
+host: payments.bankb.openbanking.com
+basePath: /v1
+schemes:
+  - https
+paths:
+  /orders:
+    post:
+      summary: Payment Approval
+      operationId: paymentApproval
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/payment'
+      responses:
+        '200':
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/payment_request_response'
+definitions:
+  payment:
+    type: object
+    properties:
+      id:
+        type: string
+        default: 3843847384388438hfh383847
+      date:
+        type: string
+        default: 2018-10-30 T 10:45 UTC
+      payee:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      payor:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      reference:
+        type: string
+        default: Real Time Payment Request
+      Institution:
+        type: string
+        default: Bank A
+  payer:
+    type: object
+    properties:
+      name:
+        type: string
+        default: Tom Jackson
+      address:
+        type: string
+        default: 1574 Broadway Street.
+      city:
+        type: string
+        default: Chicago
+      state:
+        type: string
+        default: Illinois
+      zip:
+        type: string
+        default: 33445
+  payment_request_response:
+    type: object
+    properties:
+      transaction_id:
+        type: string
+        default: AA393943843847
+      date:
+        type: string
+        default: 2018-10-30 T 10:45 UTC
+      payee:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      payor:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      reference:
+        type: string
+        default: Real Time Payment Request
+      Institution:
+        type: string
+        default: Bank A
+      status:
+        type: string
+        default: Pending</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">OpenAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Payment Request Submitted To Restaurant Suppliers Bank API</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><a href="http://axway.com"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Amplify</span></a> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Axway has the services to help deploy and manage the API for any bank, providing the services featured as part of this narrative.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">Payment Request Submitted To Restaurant Suppliers Bank API</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">POST https://payments.bankb.openbanking.com/v1 >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">{
+	"id": "3843847384388438hfh383847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A"
+}</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Request</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;"><span class="blinking">{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Response</p>
+						  </div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">The Restaurant Supplier Payment Request Triggers An Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Event Delivered In Real time By Streamdata.io</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - The bank can augment its existing API infrastructure deployed and managed by Axway with Streamdata.io event-driven infrastructure, allowing the bank to create specific topical channels that anyone can subscribe to and receive as real time streams.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">The Restaurant Supplier Payment Request Triggers An Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">GET https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/ >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+															<pre><code style="text-align: center;"><span class="blinking">data:<br><br>{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+													</div>
+						<div style="text-align: center;  padding: 10px 20px; width: 100%;">
+							<p style="font-size: 24px; font-weight: bold;">Stream</p>
+						</div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/mobile-app-1.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Supplier Requests Payment Using Their Bank Mobile App</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-1.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Supplier's Bank Choreography Responds To Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-2.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Supplier's Bank Choreography Validates Account</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-3.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Supplier's Bank Choreography Coordinates With RTP Core</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant supplier has received a notification that an order was made via their commerce system, letting them know there is  new order, allowing them to review the details of the order, and ensure that they can indeed fulfill the order at this moment. Triggering the initial event that will set real time payment scenario into motion, showing what is possible with APIs using common everyday an scenario that business uers can relate to.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/real-time-payment.png" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">The Real Time Payment (RTP) Is Initiated</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Leveraging their existing API infrastructure, through the streaming of events that occur across their API infrastructure, and their choreography engine, the restaurant supplier's bank sends a payment request to Real Time Payment (RTP) core infrastructure for processing.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Real Time Payments Core Payment Request
+    version: 1.0.0
+servers:
+    - url: 'realtimepayments.core.net'
+      scheme: tcp
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        x-media-type: xml
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Real Time Payment (RTP) Sent To Core</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">A message is sent to the Real Time Payment (RTP) core, initiating payment request on behalf of restaurant suppliers bank (A). Moving the payment request beyond the suppliers bank infrastructure, and negotiating the interaction with the restaurant owners bank.n</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">Real Time Payment (RTP) Sent To Core</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">GET realtimepayments.core.net >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Real Time Payments Core Payment Request
+    version: 1.0.0
+servers:
+    - url: 'realtimepayments.core.net'
+      scheme: tcp
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        x-media-type: xml
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+															<pre><code style="text-align: center;"><span class="blinking">&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;root&gt;<br>&lt;transaction_id&gt;AA393943843847&lt;/transaction_id&gt;<br>&lt;date&gt;2018-10-30 T 10:45 UTC&lt;/date&gt;<br>&lt;payee&gt;<br>&lt;name&gt;Tom Jackson&lt;/name&gt;<br>&lt;address&gt;1574 Broadway Street.&lt;/address&gt;<br>&lt;city&gt;Chicago&lt;/city&gt;<br>&lt;state&gt;Illinois&lt;/state&gt;<br>&lt;zip&gt;33445&lt;/zip&gt;<br>&lt;/payee&gt;<br>&lt;payor&gt;<br>&lt;name&gt;Tom Jackson&lt;/name&gt;<br>&lt;address&gt;1574 Broadway Street.&lt;/address&gt;<br>&lt;city&gt;Chicago&lt;/city&gt;<br>&lt;state&gt;Illinois&lt;/state&gt;<br>&lt;zip&gt;33445&lt;/zip&gt;<br>&lt;/payor&gt;<br>&lt;reference&gt;Real Time Payment Request&lt;/reference&gt;<br>&lt;Institution&gt;Bank A&lt;/Institution&gt;<br>&lt;status&gt;Pending&lt;/status&gt;<br>&lt;/root&gt;
+</span></code></pre>
+													</div>
+						<div style="text-align: center;  padding: 10px 20px; width: 100%;">
+							<p style="font-size: 24px; font-weight: bold;">Stream</p>
+						</div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/real-time-payment.png" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Real Time Payment (RTP) Payment Request</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Now that the restaurant suppliers bank has initiated a payment request with the Real Time Payment (RTP) core, it sends the payment request from the restaurant supplier's bank to the restaurant owners bank for fulfillment. Initiating the other side of the payment request lifecycle, and engaging with the restaurant owners bank to actually get consent and satisfy the payment between the owner and supplier.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">The Real Time Payment Request Triggers An Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Now that the restaurant suppliers bank has initiated a payment request with the Real Time Payment (RTP) core, it sends the payment request from the restaurant supplier's bank to the restaurant owners bank for fulfillment. Initiating the other side of the payment request lifecycle, and engaging with the restaurant owners bank to actually get consent and satisfy the payment between the owner and supplier.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Event Delivered In Real time By Streamdata.io</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - The bank can augment its existing API infrastructure deployed and managed by Axway with Streamdata.io event-driven infrastructure, allowing the bank to create specific topical channels that anyone can subscribe to and receive as real time streams.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">The Real Time Payment Request Triggers An Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">GET https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/ >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+															<pre><code style="text-align: center;"><span class="blinking">data:<br><br>{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+													</div>
+						<div style="text-align: center;  padding: 10px 20px; width: 100%;">
+							<p style="font-size: 24px; font-weight: bold;">Stream</p>
+						</div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-4.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owners Bank Choreography Engine Receives Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Because the restaurant owner's bank (B) uses a choreography engine they can monitor events that are being streamed across their existing API infrastructure, and trigger additional actions in response.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-5.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owners Bank Choreography Engine Validates Account</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">After receiving notification of the new payment request, the restaurant owner's bank (B) can validate the restaurant owner's account before continue with sending out approval for payment.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-6.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owners Bank Choreography Engine Checks If Funds Are Available</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">After receiving notification of the new payment request, the restaurant owner's bank (B) can validate the that restaurant has enough funds before continuing with sending out approval for payment.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owner Bank Notifies Restaurant Owner Of Payment Request</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Upon receiving the payment request, and satisfying all other business logic required, the restaurant owner's bank (B) can notify the restaurant owner of the payment request, allowing them to approve or deny the payment from their bank account.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Event Delivered In Real time By Streamdata.io</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - The bank can augment its existing API infrastructure deployed and managed by Axway with Streamdata.io event-driven infrastructure, allowing the bank to create specific topical channels that anyone can subscribe to and receive as real time streams.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">Restaurant Owner Bank Notifies Restaurant Owner Of Payment Request</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">GET https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/ >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+															<pre><code style="text-align: center;"><span class="blinking">data:<br><br>{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+													</div>
+						<div style="text-align: center;  padding: 10px 20px; width: 100%;">
+							<p style="font-size: 24px; font-weight: bold;">Stream</p>
+						</div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-owner-kitchen.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owner Approves Payment to Supplier</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Now that the restaurant owner's bank has received and validated the payment request, as well as the fact that the restaurant owner has the funds to satisfy the request, and the bank has notified the restaurant owner, they will still need to personally approve the payment to be made from their account.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/mobile-banking-approve.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owner Visits Their Banks Mobile Applicaton</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant owner has received the notification of the suppliers' bank (A) payment request from their own bank (B) via their mobile application. Using their bank (B) mobile application they consent to the payment request, allowing it to be filled.</p>
+
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-7.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owner Payment Consent Triggers Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Because the restaurant owner's bank (B) is augmenting their existing web API with server-sent event technology, publishing a real time stream for any new payment requests, they can provide streams for account payment request approvals which other systems can subscribe to.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Event Delivered In Real time By Streamdata.io</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - The bank can augment its existing API infrastructure deployed and managed by Axway with Streamdata.io event-driven infrastructure, allowing the bank to create specific topical channels that anyone can subscribe to and receive as real time streams.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">Restaurant Owner Payment Consent Triggers Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">GET https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/ >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">asyncapi: 1.2.0
+info:
+    title: Payment Request Streaming API
+    version: 1.0.0
+servers:
+    - url: 'https://streamdata.motwin.net/https://payments.banka.openbanking.com/requests/'
+      scheme: https
+      schemeVersion: '1.1'
+      variables:
+          X-Sd-Token: {sdio_token}
+          customer_id: {customer_id}
+security:
+    - httpBearerToken: []
+
+stream:
+    framing:
+        type: chunked
+        delimiter: \r\n
+    read:
+        - $ref: '#/components/messages/heartbeat'
+        - $ref: '#/components/messages/payment_requests'
+components:
+
+    securitySchemes:
+        httpBearerToken:
+            type: http
+            scheme: bearer
+    messages:
+      payment_requests:
+        type: object
+        items:
+          $ref: "#/definitions/payment_request_response"
+      heartbeat:
+          summary: 'Its purpose is to keep the connection alive.'
+          payload: {type: string, enum: ["\r\n"]}
+
+    schemas:
+      payment_request_response:
+        type: object
+        properties:
+          transaction_id:
+            type: string
+            default: AA393943843847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+          status:
+            type: string
+            default: Pending
+      payment:
+        type: object
+        properties:
+          id:
+            type: string
+            default: 3843847384388438hfh383847
+          date:
+            type: string
+            default: 2018-10-30 T 10:45 UTC
+          payee:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          payor:
+            type: array
+            items:
+              $ref: "#/definitions/payer"
+          reference:
+            type: string
+            default: Real Time Payment Request
+          Institution:
+            type: string
+            default: Bank A
+      payer:
+        type: object
+        properties:
+          name:
+            type: string
+            default: Tom Jackson
+          address:
+            type: string
+            default: 1574 Broadway Street.
+          city:
+            type: string
+            default: Chicago
+          state:
+            type: string
+            default: Illinois
+          zip:
+            type: string
+            default: 33445</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">AsyncAPI</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+															<pre><code style="text-align: center;"><span class="blinking">data:<br><br>{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+													</div>
+						<div style="text-align: center;  padding: 10px 20px; width: 100%;">
+							<p style="font-size: 24px; font-weight: bold;">Stream</p>
+						</div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-9.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Choreography Engine Coordinates With RTP Core</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The choreography engine that the restaurant owner's bank (A) uses handles the interaction with the Real Time Payment (RTP) core infrastructure. Sending the message needed to satisfy the restaurant owners consent to the payment request from the restaurant supplier.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<center>
+						<div align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; width: 100%%; height: 500px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 10px; margin: 10px; text-align: left; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Bank B
+host: payments.bankb.openbanking.com
+basePath: /v1
+schemes:
+  - https
+paths:
+  /orders:
+    post:
+      summary: Payment Approval
+      operationId: paymentApproval
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/payment'
+      responses:
+        '200':
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/payment_request_response'
+definitions:
+  payment:
+    type: object
+    properties:
+      id:
+        type: string
+        default: 3843847384388438hfh383847
+      date:
+        type: string
+        default: 2018-10-30 T 10:45 UTC
+      payee:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      payor:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      reference:
+        type: string
+        default: Real Time Payment Request
+      Institution:
+        type: string
+        default: Bank A
+  payer:
+    type: object
+    properties:
+      name:
+        type: string
+        default: Tom Jackson
+      address:
+        type: string
+        default: 1574 Broadway Street.
+      city:
+        type: string
+        default: Chicago
+      state:
+        type: string
+        default: Illinois
+      zip:
+        type: string
+        default: 33445
+  payment_request_response:
+    type: object
+    properties:
+      transaction_id:
+        type: string
+        default: AA393943843847
+      date:
+        type: string
+        default: 2018-10-30 T 10:45 UTC
+      payee:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      payor:
+        type: array
+        items:
+          $ref: "#/definitions/payer"
+      reference:
+        type: string
+        default: Real Time Payment Request
+      Institution:
+        type: string
+        default: Bank A
+      status:
+        type: string
+        default: Pending</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">OpenAPI</p>
+						  </div>
+						</center>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Payment Is Approved Using Restaurant Owner Bank API</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Now that the restaurant owner's bank has received and validated the payment request, as well as the fact that the restaurant owner has the funds to satisfy the request, and the bank has notified the restaurant owner, they will still need to personally approve the payment to be made from their account.</p>
+
+
+				</div>
+
+			</section>
+							<section style="padding: 25px;">
+
+					<center>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 5px 0px 5px 0px;">Payment Is Approved Using Restaurant Owner Bank API</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal;"><span class="blinking">POST https://payments.bankb.openbanking.com/v1 >>></span></p>
+					<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;">{
+	"id": "3843847384388438hfh383847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A"
+}</code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Request</p>
+						  </div>
+					</div>
+					<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+					<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+						<div style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; width: 600px; height: 400px; overflow: auto; widht: 100%; border: 2px solid #000; padding: 30px; text-align: left; margin-bottom: 5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+							<pre><code style="text-align: center;"><span class="blinking">{
+	"transaction_id": "AA393943843847",
+	"date": "2018-10-30 T 10:45 UTC",
+	"payee": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"payor": {
+		"name": "Tom Jackson",
+		"address": "1574 Broadway Street.",
+		"city": "Chicago",
+		"state": "Illinois",
+		"zip": 33445
+	},
+	"reference": "Real Time Payment Request",
+	"Institution": "Bank A",
+	"status": "Pending"
+}</span></code></pre>
+						</div>
+						  <div style="text-align: center;  padding: 10px 20px; width: 100%;">
+						    <p style="font-size: 24px; font-weight: bold;">API Response</p>
+						  </div>
+					</div>
+
+
+				</section>
+							<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/choregraphy-8.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owner's Bank Choreography Engine Receives Event</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">Now that the restaurant owner's bank has received and validated the payment request, as well as the fact that the restaurant owner has the funds to satisfy the request, and the bank has notified the restaurant owner, they will still need to personally approve the payment to be made from their account.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/real-time-payment.png" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Real Time Payment (RTP) Core Settles Payment</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">With the payment request satisfied, and the Real Time Payment (RTP) core notified by the restaurant owners bank (B) regarding payment consent, RTP core can begin to settle the payment.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/banka.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RTP Settles With Restaurant Suppliers Bank</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The Real Time Payment (RTP) core settles with the restaurant suppliers bank (A), moving funds into the bank account of the supplier.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-supplier.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Bank Notifies The Restaurant Supplier</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The bank (A) of the restaurant supplier notifies them that funds have been moved to their account, adjusting their balance, and the payment request has been satisfied.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Using Streamdata.io Mobile SDK</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - By proxying the banks existing API infrastructure using Streamdata.io, they are able to stream notifications to the mobile banking application for the restaurant supplier.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/bankb.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">RTP Settles With Restaurant Owners Banks</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The Real Time Payment (RTP) core settles with the restaurant owners bank (B), removing funds from the bank account of the restaurant owner.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-logo.png" width="125" align="left" style="padding: 10px;"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Axway Choreography Engine</span> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - Using Axway Choreography Engine (ACE) to subscribe to events and receive them in real time, setting into motion other actions depending on the topic being subscribd to and the types of events that occur.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+											<div style="margin-top: 50px; width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+						  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-owner-2.jpg" alt="Some Title">
+						  <div style="text-align: center; padding: 10px 10px; width: 100%;"></div>
+						</div>
+
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 30px; text-align:left;">
+
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Bank Notifies The Restaurant Owner</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The bank (B) of the restaurant owner notifies them that funds have been removed from their account, adjusting their balance, and that the payment request has been satisfied.</p>
+
+															 	<p style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 45px; margin-bottom: 25px;"><strong>Services That Apply:</strong></p>
+						<ul style="padding-left: 15px;">
+												 			<li style="list-style: none; margin-top: 40px; margin-bottom: 40px;"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/streamdata-logo.png" width="125" align="left" style="padding: 10px;"><a href="http://streamdata.io"><span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Streamdata.io</span></a> <span style="font-family: Helvetica, Arial, sans-serif; font-size: 20px; margin-top: 5px; margin-bottom: 5px;"> - The bank can augment its existing API infrastructure deployed and managed by Axway with Streamdata.io event-driven infrastructure, allowing the bank to create specific topical channels that anyone can subscribe to and receive as real time streams.</span></li>
+					 									</ul>
+
+				</div>
+
+			</section>
+						<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant-delivery.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Supplier Schedules Delivery</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">With the real time payment received, the restaurant supplier goes ahead and schedules the order for delivery to the restaurant. Enabling the restaurant owner to continue doing business, as well as the restaurant supplier to do what they do best, and giving the restaurant supplier the funds they need to purchase new items for their inventory.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/restaurant.jpg" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Restaurant Owner Receives Their Order</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">The restaurant owner receives the order from their supplier, allowing them to continue with dinner service for the remainder of the week. Enabling them to be more flexible in their planning of the weekly service, being confident that they will be able to manage their finances in real time, and purchase the supplies they need to keep their customers happy.</p>
+				</div>
+
+
+			</section>
+					<section style="padding: 25px;">
+
+				<div style="padding: 25px; border: 0px solid #FFF; width:43%; display: block;  float: left;">
+					<div style="width: 100%; background-color: white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+					  <img style="width: 100%;" src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/axway-streamdata.png" alt="Some Title">
+					  <div style="text-align: center; padding: 10px 10px; width: 102%;"></div>
+					</div>
+				</div>
+				<div style="border: 0px solid #FFF; width:6%; display: block; float: right; text-align:left;"><br /></div>
+				<div style="border: 0px solid #FFF; width:43%; display: block; float: right; padding: 15px; text-align:left;">
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; margin: 30px 0px 30px 0px;">Thank You!</p>
+					<p style="font-family: Helvetica, Arial, sans-serif; font-size: 24px;">For more information you can visit axway.com or streamdata.io to learn more about enabling the real time payments as outlined in this demonstration.</p>
+				</div>
+
+
+			</section>
+
+         </div>
+         <!-- The navigational controls UI -->
+         <aside class="controls">
+            <a class="left" href="#"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/left-arrow.png" width="50"></a><a class="right" href="#"><img src="https://s3.amazonaws.com/kinlane-productions/sdio-journey/psd2/right-arrow.png" width="50"></a>            <a class="up" href="#" style="display: none;">&#x25B2;</a>
+            <a class="down" href="#" style="display: none;">&#x25BC;</a>
+         </aside>
+         <!-- Presentation progress bar -->
+         <div class="progress"><span></span></div>
+      </div>
+      <script src="/assets/head.min.js"></script>
+      <script src="/assets/reveal.min.js"></script>
+      <script>
+         // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+         Reveal.initialize({
+             controls: true,
+             progress: true,
+             history: true,
+
+             theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+             transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+             // Optional libraries used to extend on reveal.js
+             dependencies: []
+         });
+
+      </script>
+   </body>
+</html>
