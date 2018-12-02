@@ -355,15 +355,44 @@ TEST - 2<br>
     <center>
 
       <form name="entity-search">
-        <strong>Journey:</strong>
-        <input type="text" name="journey_name" id="journey_name" value="" width="150" style="margin-right: 5px;"><br>
-        <strong>Traveler:</strong>
-        <input type="text" name="traveler_name" id="traveler_name" value="" width="150" style="margin-right: 5px;"><br>
-        <strong>Notebook:</strong>
-        <input type="text" name="traveler_notebook" id="traveler_notebook" value="" width="150" style="margin-right: 5px;"><br>
-        <strong>Email:</strong>
-        <input type="text" name="traveler_email" id="traveler_email" value="" width="150" style="margin-right: 5px;"><br>
-        <input type="button" name="search_button" value="Register" onclick="registerJourney();">
+        <table>
+            <tr>
+              <td>
+                <strong>Journey:</strong>
+              </td>
+              <td>
+                <input type="text" name="journey_name" id="journey_name" value="" width="150" style="margin-right: 5px;"><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Traveler:</strong>
+              </td>
+              <td>
+                <input type="text" name="traveler_name" id="traveler_name" value="" width="150" style="margin-right: 5px;"><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Notebook:</strong>
+              </td>
+              <td>
+                <input type="text" name="traveler_notebook" id="traveler_notebook" value="" width="150" style="margin-right: 5px;"><br>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Email:</strong>
+              </td>
+              <td>
+                <input type="text" name="traveler_email" id="traveler_email" value="" width="150" style="margin-right: 5px;"><br>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="button" name="search_button" value="Register" onclick="registerJourney();"></td>
+            </tr>
+          </table>
       </form>
 
       <div class="taggedLinkCards__cards" id="searchlisting"></div>
