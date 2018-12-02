@@ -307,7 +307,7 @@ title: Streamdata.io API Journey
 
 <!--Schedule Workshop--->
 <section class="taggedLinkCards">
-
+TEST - 1<br>
 <script>
 
   function registerJourney()
@@ -321,7 +321,7 @@ title: Streamdata.io API Journey
     register['journey'] = journey_name;
     register['name'] = traveler_name;
     register['notebook'] = traveler_notebook;
-
+    console.log(register);
     jQuery.ajax({
        url: "https://dbchwyuwsg.execute-api.us-east-1.amazonaws.com/dev/journeys/register",
        type: "POST",
