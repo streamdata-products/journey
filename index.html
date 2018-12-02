@@ -322,7 +322,9 @@ TEST - 2<br>
     register['name'] = traveler_name;
     register['notebook'] = traveler_notebook;
     register['email'] = traveler_email;
+
     console.log(register);
+
     jQuery.ajax({
        url: "https://dbchwyuwsg.execute-api.us-east-1.amazonaws.com/dev/journeys/registrations",
        type: "POST",
@@ -332,6 +334,8 @@ TEST - 2<br>
          results = JSON.parse(results);
          console.log(results);
          //$("#searchlisting").html('<p align="center"><strong>No Results Found!</strong></p>');
+
+        status = results.status;         
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
