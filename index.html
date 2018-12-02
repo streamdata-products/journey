@@ -315,6 +315,7 @@ title: Streamdata.io API Journey
     journey_name = document.getElementById('journey_name').value;
     traveler_name = document.getElementById('traveler_name').value;
     traveler_notebook = document.getElementById('traveler_notebook').value;
+    traveler_email = document.getElementById('traveler_email').value;
 
     register = {};
     register['journey'] = journey_name;
@@ -354,6 +355,8 @@ title: Streamdata.io API Journey
         <input type="text" name="traveler_name" id="traveler_name" value="" width="150" style="margin-right: 5px;">
         <strong>Notebook:</strong>
         <input type="text" name="traveler_notebook" id="traveler_notebook" value="" width="150" style="margin-right: 5px;">
+        <strong>Email:</strong>
+        <input type="text" name="traveler_email" id="traveler_email" value="" width="150" style="margin-right: 5px;">
         <input type="button" name="search_button" value="Register" onclick="registerJourney();">
       </form>
 
