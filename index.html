@@ -335,7 +335,8 @@ TEST - 2<br>
          console.log(results);
          //$("#searchlisting").html('<p align="center"><strong>No Results Found!</strong></p>');
 
-        status = results.status;         
+        status = results.status;
+        console.log("status: " + status);
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
