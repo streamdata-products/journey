@@ -326,7 +326,7 @@ TEST - 2<br>
     jQuery.ajax({
        url: "https://dbchwyuwsg.execute-api.us-east-1.amazonaws.com/dev/journeys/registrations",
        type: "POST",
-       data: register,
+       data: JSON.stringify(register),
        success:function(results){
 
          results = JSON.parse(results);
