@@ -316,55 +316,20 @@ title: Streamdata.io API Journey
     traveler_name = document.getElementById('traveler_name').value;
     traveler_notebook = document.getElementById('traveler_notebook').value;
 
+    register = {};
+    register['journey'] = journey_name;
+    register['name'] = traveler_name;
+    register['notebook'] = traveler_notebook;
+
     jQuery.ajax({
-       url: "http://search.api.gallery.stack.network/search-api-gallery.php?query="+search_keywords,
+       url: "https://dbchwyuwsg.execute-api.us-east-1.amazonaws.com/dev/journeys/register",
        method: "post",
-       data: myKeyVals,
+       data: register,
        success:function(results){
 
          results = JSON.parse(results);
-          //console.log(results);
-          $("#searchlisting").html("<br />");
-          if(results['search_results'].length > 0)
-            {
-            jQuery.each(results['search_results'], function(rowKey, rowEntry) {
-
-              //console.log(rowEntry);
-
-              company_name = rowEntry['company_name'];
-              path = rowEntry['path'];
-              summary = rowEntry['summary'];
-              summary = summary.replace('"','');
-              description = rowEntry['description'];
-              description = description.replace('"','');
-              gallery_url = rowEntry['gallery_url'];
-              image = rowEntry['image'];
-
-              var $html = '<div class="taggedLinkCard taggedLinkCard--red" data-platform="html5" id="entity-{% increment counter %}">';
-              $html = $html + '<div class="taggedLinkCard__container enterAnimation enterAnimation--active" data-enter-animation="">';
-              $html = $html + '<div class="taggedLinkCard__upper" style="background-color:#FFF;">';
-              $html = $html + '<a href="' + gallery_url + '"><img src="' + image + '" class="taggedLinkCard__image" alt=""></a>';
-              $html = $html + '</div>';
-              $html = $html + '<div class="taggedLinkCard__lower">';
-              $html = $html + '<div class="taggedLinkCard__copy">';
-              $html = $html + '<h3 class="taggedLinkCard__title"><a href="' + gallery_url + '" target=_"_blank">' + company_name + ' ' + summary + '</a></h3>';
-              $html = $html + '<p class="taggedLinkCard__body">' + description + '</p>';
-              $html = $html + '</div>';
-              $html = $html + '</div>';
-              $html = $html + '</div>';
-              $html = $html + '</div>';
-
-              //console.log($html);
-
-              $("#searchlisting").append($html);
-
-            });
-          }
-        else
-          {
-          $("#searchlisting").html('<p align="center"><strong>No Results Found!</strong></p>');
-          }
-
+         console.log(results);
+         //$("#searchlisting").html('<p align="center"><strong>No Results Found!</strong></p>');
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
