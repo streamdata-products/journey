@@ -240,7 +240,7 @@ title: Streamdata.io API Journey
         console.log("IN 123");
          //results = JSON.parse(results);
          console.log(results);
-         //$("#searchlisting").html('<p align="center"><strong>No Results Found!</strong></p>');
+         //$("#registerMessage").html('<p align="center"><strong>No Results Found!</strong></p>');
 
         status = results.status;
         console.log("status: " + status);
@@ -259,6 +259,16 @@ title: Streamdata.io API Journey
 
         url = results.url;
         console.log("url: " + url);
+
+        if(status=='Registered')
+          {
+          $("#registerMessage").html('<p align="center"><strong>Beginning Your Journey!</strong></p>');
+          location.href = url + '?journey=' + journey + '&name=' + name + '&notebook=' + notebook;
+          }
+        else
+          {
+          $("#registerMessage").html('<p align="center"><strong>Sorry The Journey Was Not Found!</strong></p>');
+          }
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -317,7 +327,7 @@ title: Streamdata.io API Journey
           </table>
       </form>
 
-      <div class="taggedLinkCards__cards" id="searchlisting"></div>
+      <div class="taggedLinkCards__cards" id="registerMessage"></div>
 
     </center>
 
