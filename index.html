@@ -330,13 +330,13 @@ TEST - 2<br>
        type: "POST",
        data: JSON.stringify(register),
        success:function(results){
-
+        console.log("IN!");
          results = JSON.parse(results);
          console.log(results);
          //$("#searchlisting").html('<p align="center"><strong>No Results Found!</strong></p>');
 
-        status = results.status;
-        console.log("status: " + status);
+        //status = results.status;
+        //console.log("status: " + status);
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -355,13 +355,13 @@ TEST - 2<br>
     <center>
 
       <form name="entity-search">
-        <table>
+        <table cellpadding="5" cellspacing="2">
             <tr>
               <td>
                 <strong>Journey:</strong>
               </td>
               <td>
-                <input type="text" name="journey_name" id="journey_name" value="" width="150" style="margin-right: 5px;"><br>
+                <input type="text" name="journey_name" id="journey_name" value="" width="175" style="margin-right: 5px;"><br>
               </td>
             </tr>
             <tr>
@@ -369,7 +369,7 @@ TEST - 2<br>
                 <strong>Traveler:</strong>
               </td>
               <td>
-                <input type="text" name="traveler_name" id="traveler_name" value="" width="150" style="margin-right: 5px;"><br>
+                <input type="text" name="traveler_name" id="traveler_name" value="" width="175" style="margin-right: 5px;"><br>
               </td>
             </tr>
             <tr>
@@ -377,7 +377,7 @@ TEST - 2<br>
                 <strong>Notebook:</strong>
               </td>
               <td>
-                <input type="text" name="traveler_notebook" id="traveler_notebook" value="" width="150" style="margin-right: 5px;"><br>
+                <input type="text" name="traveler_notebook" id="traveler_notebook" value="" width="175" style="margin-right: 5px;"><br>
               </td>
             </tr>
             <tr>
@@ -385,7 +385,7 @@ TEST - 2<br>
                 <strong>Email:</strong>
               </td>
               <td>
-                <input type="text" name="traveler_email" id="traveler_email" value="" width="150" style="margin-right: 5px;"><br>
+                <input type="text" name="traveler_email" id="traveler_email" value="" width="175" style="margin-right: 5px;"><br>
               </td>
             </tr>
             <tr>
